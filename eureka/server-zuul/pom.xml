@@ -8,14 +8,19 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>base02</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>server-zuul</artifactId>
 
-    <modules>
-        <module>server-discovery-001</module>
-        <module>server-discovery-002</module>
-        <module>server-discovery-003</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

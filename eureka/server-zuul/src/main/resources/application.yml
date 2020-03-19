@@ -1,0 +1,16 @@
+server:
+  port: 8280
+spring:
+  application:
+    name: server-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka01:8361/eureka,http://eureka02:8362/eureka,http://eureka03:8363/eureka
+    healthcheck:
+      enabled: true
+  instance:
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 6
+    lease-renewal-interval-in-seconds: 3
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
