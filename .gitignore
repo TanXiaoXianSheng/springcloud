@@ -31,7 +31,7 @@ HELP.md
 .idea
 *.iml
 .mvn
-/target/
+*/target/
 *.cmd
 mvnw
 HELP.md
