@@ -1,0 +1,18 @@
+server:
+  port: 8072
+
+spring:
+  application:
+    name: consumer-user
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka01:8361/eureka,http://eureka02:8362/eureka,http://eureka03:8363/eureka
+    healthcheck:
+      enabled: true
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 6
+    lease-renewal-interval-in-seconds: 3
