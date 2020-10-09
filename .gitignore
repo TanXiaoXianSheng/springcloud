@@ -156,6 +156,7 @@ local.properties
 .scala_dependencies
 .worksheet
 
+.idea
 target/
 ./spark/.idea
 ./spark/.settings
