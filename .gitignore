@@ -167,3 +167,5 @@ target/
 */.classpath
 */.project
 */*.iml
+/.idea
+/.idea

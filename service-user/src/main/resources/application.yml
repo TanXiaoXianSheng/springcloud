@@ -1,0 +1,22 @@
+server:
+  port: 8071
+
+spring:
+  application:
+    name: service-user
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka01:8361/eureka,http://eureka02:8362/eureka,http://eureka03:8363/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 6
+    lease-renewal-interval-in-seconds: 3
+
+info:
+  groupId: "@project.groupId@"
+  artifactId: "@project.artifactId@"
+  version: "@project.version@"
+  leader: 张三
+  phone: 110
+
